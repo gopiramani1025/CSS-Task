@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+  --white: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 12px;
+}
+
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  box-sizing: border-box;
+  background: linear-gradient(180deg, var(--soft-violet), var(--soft-blue));
+  background-size: cover;
+  min-height: 100vh;
+  font-family: Kumbh Sans;
+}
+
+h1 {
+  margin-top: 6.1rem;
+  margin-left: 4rem;
+  font-size: 2.5rem;
+}
+
+.main-container {
+  background-color: var(--white);
+  max-width: 900px;
+  width: 90%;
+  border-radius: 15px;
+  margin: 0 auto;
+  margin-top: 11rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  min-height: 42rem;
+  height: 100%;
+}
+
+.img-section {
+  position: relative;
+  background-image: url("img/bg-pattern-desktop 2.svg");
+  background-repeat: no-repeat;
+  background-size: 105%;
+  background-position: top 3rem left -6rem;
+}
+
+.img-section-center {
+  overflow-x: hidden;
+}
+
+.container-img {
+  display: block;
+  margin-top: 5.1rem;
+  margin-left: -6.1rem;
+}
+
+.container-img-2 {
+  display: block;
+  margin-left: -19%;
+  margin-top: -51%;
+}
+
+.main-list {
+  display: grid;
+  grid-template-columns: 3fr;
+  margin-left: 4rem;
+  margin-right: 9rem;
+  margin-top: 1.5rem;
+  gap: 2.2rem;
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.question p {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Kumbh" Sans;
+  line-height: 2;
+}
+
+
+.faq-accordian {
+  border-bottom: groove 1.5px #80808010;
+}
+
+.answer {
+  color: rgb(163, 163, 163);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 1025px) {
+  .main-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 17rem 1fr;
+    justify-items: center;
+    margin-top: 25%;
+    width: 70%;
+    min-height: 55rem;
+  }
+
+  @media screen and (max-width: 600px) {
+    .main-container {
+      margin-top: 35%;
+      grid-template-rows: 10rem 1fr;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  body{
+
+  }
+
+  .main-container{
+    min-height: 80vh;
+  }
+
+  .main-container .container-img {
+    position: absolute;
+    top: -170px;
+    left: -40px;
+    width: 230px;
+    right: 0;
+  }
+
+  .main-container .container-img-2 {
+    position: absolute;
+    width: 90px;
+    margin-left: -120px;
+    margin-top: -40px;
+  }
+
+  .faq-section{
+    width: 135%;
+    text-align: left;
+    margin-left: 60px;
+  }
+
+  .faq-container h1 {
+    margin-top: 5px;
+    font-size: 32px;
+    text-align: center;
+    margin-left: -80px;
+  }
+
+  .faq-container .answer {
+    display: none;
+  }
+}
